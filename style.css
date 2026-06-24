@@ -1,0 +1,135 @@
+/* Réinitialisation de base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c0c0c0; /* Gris classique style Windows 95 */
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 2vw;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+/* Le style de cadre principal brutaliste */
+.cadre-lourd {
+    border: 4px solid #000;
+    box-shadow: 10px 10px 0px #000; /* Ombre dure, non floutée */
+    background-color: #fff;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: yellow;
+    padding: 5px 10px;
+    border: 2px solid black;
+    transition: all 0.1s;
+}
+
+nav a:hover {
+    background-color: black;
+    color: yellow;
+}
+
+/* En-tête / Hero Section */
+.hero {
+    background-color: #ff00ff; /* Rose néon agressif */
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0 0 20px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-bottom: 4px solid #fff;
+    padding-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Grille de Projets */
+.grille-projets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.projet-carte {
+    display: flex;
+    flex-direction: column;
+    /* 1. On définit une ombre de base */
+    box-shadow: 8px 8px 0px #000; 
+    /* 2. On ajoute une transition pour que le soulèvement soit fluide */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; 
+}
+
+.projet-carte img {
+    max-width: 100%;
+    border: 3px solid #000;
+    margin-bottom: 15px;
+    filter: grayscale(100%) contrast(150%); /* Rendu d'image très dur */
+}
+
+.projet-carte:hover {
+    /* 3. L'objet grossit ET se décale légèrement vers le haut/gauche */
+    transform: scale(1.02) translate(-4px, -4px); 
+    /* 4. L'ombre s'éloigne beaucoup plus vers le bas/droite */
+    box-shadow: 16px 16px 0px #000; 
+}
+
+.lien-brut {
+    display: inline-block;
+    margin-top: auto;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.lien-brut:hover {
+    background-color: #00ff00; /* Vert fluo au survol */
+    color: #000;
+}
+
+/* Pied de page */
+.footer-brut {
+    background-color: #ffff00;
+    text-align: center;
+}
+
+.lien-geant {
+    display: block;
+    font-size: 4rem;
+    font-weight: bold;
+    color: blue;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+.lien-geant:hover {
+    color: red;
+    background-color: #000;
+}
